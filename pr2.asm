@@ -13,9 +13,8 @@
    prompt2 BYTE "Enter y",0
    prompt3 BYTE "Enter z",0
    string BYTE 40 Dup(?)
-   result1 BYTE "result is",0
+   result1 BYTE "Result is",0
    sum BYTE 11 Dup(?),0
-
 
 .CODE
 
@@ -37,12 +36,7 @@ MainProc PROC
 	 add eax,x
 
 	 imul eax,2
-	 add eax,ebx
-	 
-
-	 
-	
-	
+	 add eax,ebx	
 
 	 dtoa sum,eax
 	 output result1,sum

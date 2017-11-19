@@ -3,8 +3,6 @@
  INCLUDE io.h
 .STACK 4096
 
-
-
 .DATA
    x   DWORD ?
    y   DWORD ?
@@ -18,9 +16,7 @@
    result1 BYTE "result is",0
    sum BYTE 11 Dup(?),0
 
-
 .CODE
-
 MainProc PROC 
      input prompt1 ,string ,40
 	 atod string 
@@ -37,7 +33,6 @@ MainProc PROC
 	 input prompt4 ,string ,40
 	 atod string 
 	 mov m,eax
-	 
 
 	 mov ebx,m
 	 add ebx,y
@@ -48,11 +43,9 @@ MainProc PROC
 	 add ebx,eax
 	 div 4,ebx
 	 
-	 dtoa sum,ebx
-		 
+	 dtoa sum,ebx	 
 	 output result1,sum
 	 xor eax,eax
 	 ret
-
 MainProc ENDP
 END

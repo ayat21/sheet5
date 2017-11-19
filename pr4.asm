@@ -12,19 +12,16 @@
    r   DWORD ?
 
     prompt1 BYTE "Enter number of dollars",0
-	prompt2 BYTE "Enter number of fifty-cent peices",0
-	prompt3 BYTE "Enter number of quarters",0
+    prompt2 BYTE "Enter number of fifty-cent peices",0
+    prompt3 BYTE "Enter number of quarters",0
     prompt4 BYTE "Enter number of dimes",0
     prompt5 BYTE "Enter number of nickels",0
     prompt6 BYTE "Enter number of pennis",0   
-
    string BYTE 40 Dup(?)
    result1 BYTE " Total value is : ",0
    sum BYTE 11 Dup(?),0
-
-
+   
 .CODE
-
 MainProc PROC 
      input prompt1 ,string ,40
 	 atod string 
@@ -63,13 +60,9 @@ MainProc PROC
 	 imul n,5
 	 add eax,p
 	 
-
-	 
-	 
 	 dtoa sum,eax		 
 	 output result1,sum
 	 xor eax,eax
 	 ret
-
 MainProc ENDP
 END

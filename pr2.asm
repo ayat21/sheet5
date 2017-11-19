@@ -2,9 +2,6 @@
 .MODEL FLAT
  INCLUDE io.h
 .STACK 4096
-
-
-
 .DATA
    x   DWORD ?
    y   DWORD ?
